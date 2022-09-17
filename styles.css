@@ -15,7 +15,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .caca{
     text-align: center;
+}
+.nameInput{
+    border: 1px solid aquamarine;
+    border-radius: 4px;
 }
