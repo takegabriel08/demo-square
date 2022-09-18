@@ -13,5 +13,6 @@ input.addEventListener("keypress", function(event) {
     event.preventDefault();
 
     caca.textContent = input.value;
+    input.value = "";
   }
 });
