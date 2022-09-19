@@ -1,5 +1,5 @@
 Filet caca = document.querySelector("h1.caca");
-caca.textContent = "Vila Lorena";
+caca.textContent = "Lorena ❤️ Andy";
 
 
 // Get the input field
