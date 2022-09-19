@@ -1,4 +1,4 @@
-Filet caca = document.querySelector("h1.caca");
+let caca = document.querySelector("h1.caca");
 caca.textContent = "Lorena ❤️ Andy";
 
 
