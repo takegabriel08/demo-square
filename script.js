@@ -1,5 +1,5 @@
-let caca = document.querySelector("h1.caca");
-caca.textContent = "Jsleveloper";
+let mainName = document.querySelector("h1.mainName");
+mainName.textContent = "Jsleveloper";
 
 
 // Get the input field
@@ -12,7 +12,7 @@ input.addEventListener("keypress", function(event) {
     // Cancel the default action, if needed
     event.preventDefault();
 
-    caca.textContent = input.value;
+    mainName.textContent = input.value;
     input.value = "";
   }
 });
