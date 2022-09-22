@@ -5,8 +5,8 @@ mainName.textContent = "Jsleveloper";
 // Get the input field
 var input = document.getElementById("firstInput");
 var input2 = $("#firstInput");
-console.log(JSON.stringify(input));
-console.log(JSON.stringify(input2));
+console.log(input);
+console.log(input2);
 
 // Execute a function when the user presses a key on the keyboard
 input.addEventListener("keypress", function(event) {
