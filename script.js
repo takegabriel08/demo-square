@@ -4,14 +4,14 @@ mainName.textContent = "Jsleveloper";
 
 // Get the input field
 var input = document.getElementById("firstInput");
-var input2 = $("#firstInput");
-console.log('JS');
-console.log(input);
-console.log('Jquery');
-console.log(input2);
+// var input2 = $("#firstInput");
+// console.log('JS');
+// console.log(input);
+// console.log('Jquery');
+// console.log(input2);
 
 // Execute a function when the user presses a key on the keyboard
-input.addEventListener("keypress", function(event) {
+input.addEventListener("keypress", function (event) {
   // If the user presses the "Enter" key on the keyboard
   if (event.key === "Enter") {
     // Cancel the default action, if needed
@@ -20,4 +20,57 @@ input.addEventListener("keypress", function(event) {
     mainName.textContent = input.value;
     input.value = "";
   }
+});
+
+var button = document.querySelector('input.chPos');
+var square = document.querySelector('div#square');
+const positions = ["top-left", "top-right", "bottom-right", "bottom-left"];
+var index;
+square.style.bottom = "10px"
+square.style.left = "10px"
+square.style.top = ""
+square.style.right = ""
+
+button.addEventListener('click', (event) => {
+  if (index == positions.length - 1 || index == undefined) {
+    index = 0
+  } else {
+    index = index + 1
+  }
+
+  console.log(index)
+
+  if (positions[index] == "top-left") {
+    square.style.bottom = ""
+    square.style.left = "10px"
+    square.style.top = "10px"
+    square.style.right = ""
+  }
+  else if
+    (positions[index] == "bottom-left") {
+    square.style.bottom = "10px"
+    square.style.left = "10px"
+    square.style.top = ""
+    square.style.right = ""
+  }
+  else if (positions[index] == "top-right") {
+    square.style.bottom = ""
+    square.style.left = ""
+    square.style.top = "10px"
+    square.style.right = "10px"
+  }
+  else if (positions[index] == "bottom-right") {
+    square.style.bottom = "10px"
+    square.style.left = ""
+    square.style.top = ""
+    square.style.right = "10px"
+  }
+  else {
+    square.style.bottom = ""
+    square.style.left = "10px"
+    square.style.top = "10px"
+    square.style.right = ""
+  }
+
+
 });
