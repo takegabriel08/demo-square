@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>jsleveloper</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css">
-  <title>jsleveloper</title>
-</head>
-
-<body>
-  <div class="parent">
-    <h1 class="mainName">xyz</h1>
-    <input type="text" placeholder="Input name here" class="nameInput" id="firstInput">
-    <input type="button" class="chPos" value="🟫 Change Position">
-  </div>
-  <div id="square" ></div>
-  <script src="script.js"></script>
-</body>
-
+  <body>
+    <div class="parent">
+      <h1 class="mainName">xyz</h1>
+      <input
+        type="text"
+        placeholder="Input name here"
+        class="nameInput"
+        id="firstInput"
+      />
+      <input type="button" class="chPos" value="🟫 Change Position" />
+      <div class="arrowContainer">
+        <div class="row">
+          <input type="button" class="up" id="up" value="↑" />
+        </div>
+        <div class="row2">
+          <input type="button" class="left" id="left" value="←" />
+          <input type="button" class="down" id="udown" value="↓" />
+          <input type="button" class="right" id="right" value="→" />
+        </div>
+      </div>
+    </div>
+    <div id="square"></div>
+    <script src="script.js"></script>
+  </body>
 </html>
