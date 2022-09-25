@@ -10,8 +10,8 @@ body {
     position: relative;
   }
   .parent {
-    min-height: 200px;
-    min-width: 200px;
+    min-height: 250px;
+    min-width: 250px;
     height: fit-content;
     width: fit-content;
     background-color: blue;
@@ -53,4 +53,10 @@ body {
     justify-content: center;
     align-items: center;
   }
-  
+  .arrow{
+    min-height: 50px;
+    min-width: 50px;
+    height: fit-content;
+    width: fit-content;
+    font-size: 25px;
+  }

@@ -77,6 +77,36 @@ button.addEventListener("click", changePosition);
 //Make square move step by step based on arrow events
 document.onkeydown = checkKey;
 
+// Getting arrows
+var left = document.querySelector('#left');
+var right = document.querySelector('#right');
+var up = document.querySelector('#up');
+var down = document.querySelector('#down');
+
+left.addEventListener('click', () => {
+  document.dispatchEvent(new KeyboardEvent('keydown', {
+    keyCode: '37'
+  }));
+})
+right.addEventListener('click', () => {
+  var event = new KeyboardEvent('keydown', {
+    keyCode: '39'
+  });
+  document.dispatchEvent(event);
+})
+up.addEventListener('click', () => {
+  var event = new KeyboardEvent('keydown', {
+    keyCode: '38'
+  });
+  document.dispatchEvent(event);
+})
+down.addEventListener('click', () => {
+  var event = new KeyboardEvent('keydown', {
+    keyCode: '40'
+  });
+  document.dispatchEvent(event);
+})
+
 function checkKey(e) {
   e = e || window.event;
 
