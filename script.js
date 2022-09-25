@@ -26,9 +26,9 @@ var button = document.querySelector("input.chPos");
 // Select Square shape from dom
 var square = document.querySelector("div#square");
 // positions array to loop through
-const positions = ["top-left", "top-right", "bottom-right", "bottom-left"];
+const positions = ["bottom-left", "top-left", "top-right", "bottom-right"];
 // Declare index as var so it is accessible from inside event function
-var index = 0;
+var index = 1;
 var positionValue = [];
 // set square initial position on page from js so that we don't mess values up with css values.
 square.style.bottom = "10px";
@@ -78,38 +78,42 @@ button.addEventListener("click", changePosition);
 document.onkeydown = checkKey;
 
 // Getting arrows
-var left = document.querySelector('#left');
-var right = document.querySelector('#right');
-var up = document.querySelector('#up');
-var down = document.querySelector('#down');
+var left = document.querySelector("#left");
+var right = document.querySelector("#right");
+var up = document.querySelector("#up");
+var down = document.querySelector("#down");
 
-left.addEventListener('click', () => {
-  document.dispatchEvent(new KeyboardEvent('keydown', {
-    keyCode: '37'
-  }));
-})
-right.addEventListener('click', () => {
-  var event = new KeyboardEvent('keydown', {
-    keyCode: '39'
+left.addEventListener("click", () => {
+  document.dispatchEvent(
+    new KeyboardEvent("keydown", {
+      keyCode: "37",
+    })
+  );
+});
+right.addEventListener("click", () => {
+  var event = new KeyboardEvent("keydown", {
+    keyCode: "39",
   });
   document.dispatchEvent(event);
-})
-up.addEventListener('click', () => {
-  var event = new KeyboardEvent('keydown', {
-    keyCode: '38'
+});
+up.addEventListener("click", () => {
+  var event = new KeyboardEvent("keydown", {
+    keyCode: "38",
   });
   document.dispatchEvent(event);
-})
-down.addEventListener('click', () => {
-  var event = new KeyboardEvent('keydown', {
-    keyCode: '40'
+});
+down.addEventListener("click", () => {
+  var event = new KeyboardEvent("keydown", {
+    keyCode: "40",
   });
   document.dispatchEvent(event);
-})
+});
 
 function checkKey(e) {
   e = e || window.event;
-
+  if (index > 3) {
+    index = 0;
+  }
   if (positions[index] == "bottom-left") {
     if (e.keyCode == "38") {
       square.style.bottom =
